@@ -27,22 +27,25 @@ class ViewController: UIViewController {
     
     var candidate = ["Warren", "Sanders", "Klobuchar", "Buttigeg", "Bloomberg", "Biden"]
     
-    var voteCount = [0,0,0,0,0,0]
+    var voteCount = [0,1,2,3,4,5]
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
+        voteCount[0] = Int((sender.value))
+            label0.text = "Warren: \(voteCount[0])"
+            label1.text = "Sanders: \(voteCount[1])"
+            label2.text = "Klobuchar: \(voteCount[2])"
+            label3.text = "Buttigeg: \(voteCount[3])"
+            label4.text = "Bloomberg: \(voteCount[4])"
+            label5.text = "Biden: \(voteCount[5])"
+       
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        label0.text = "Warren: \(voteCount[0])"
-              label1.text = "Sanders: \(voteCount[1])"
-              label2.text = "Klobuchar: \(voteCount[2])"
-              label3.text = "Buttigeg: \(voteCount[3])"
-              label4.text = "Bloomberg: \(voteCount[4])"
-              label5.text = "Biden: \(voteCount[5])"
+             
               
               imageView0.image = UIImage(named: "Warren")
               imageView1.image = UIImage(named: "Sanders")
@@ -51,10 +54,10 @@ class ViewController: UIViewController {
               imageView4.image = UIImage(named: "Bloomberg")
               imageView5.image = UIImage(named: "Biden")
               
-        
-        
+     
     }
-
+ 
+    
 
 }
 
